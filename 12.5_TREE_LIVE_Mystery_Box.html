@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Box</title>
+</head>
+<body>
+    <style>
+        body{
+            color: #ffffff;
+            font-family: sans-serif;
+            background-color: #016580;
+        }
+    </style>
+    <center>
+        <h1>TREE LIVE MYSTERY BOX</h1>
+        <br>
+        <form action="https://formsubmit.co/v08q3tjti@mozmail.com" method="POST" enctype="multipart/form-data">
+         <input type="text" name="Name" placeholder="Name Nachname" required><br>
+         <select name="Mystery Box" id="Box" required onchange="textAnzeigen()">
+            <option value="">--Bitte Wählen--</option>
+            <option value="Armband" id="Armband">Armband Mystery Box</option>
+            <option value="Kette">Ketten Mystery Box</option>
+            <option value="Bild">Bild Mystery Box</option>
+            <option value="XL">XL Mystery Box</option>
+            <option value="XXL">XXL Mystery Box</option>
+         </select>
+
+         <p id="ergebnisText"></p>
+
+    <script>
+        function textAnzeigen() {
+            var selectElement = document.getElementById("Box");
+            
+            var selectedValue = selectElement.value;
+            
+            var output = document.getElementById("ergebnisText");
+            
+            if (selectedValue === "Armband") {
+                output.textContent = "Preis: 3,75€";
+            } else if (selectedValue === "Kette") {
+                output.textContent = "Preis: 4,50€";
+            } else if (selectedValue === "Bild") {
+                output.textContent = "Preis: 4,50€";
+            } else if (selectedValue === "XL") {
+                output.textContent = "Preis: 5,50€";
+            } else if (selectedValue === "XXL") {
+                output.textContent = "Preis: 7€";
+            } else {
+                output.textContent = "";
+            }
+        }
+    </script>
+
+         <button type="submit">Absenden</button>
+        <br>
+        <h2>Armband Mystery Box</h2>
+        <h3>
+            Armband + Armband <br>
+            mit zufälligem Motiven darauf
+        </h3>
+        <br>
+        <h2>Ketten Mystery Box</h2>
+        <h3>
+            Kette + Kette <br>
+            mit zufälligem Motiven darauf
+        </h3>
+        <br>
+        <h2>Bild Mystery Box</h2>
+        <h3>
+            Bild + Bild<br>
+            mit zufälligem Motiven
+        </h3>
+        <br>
+        <h2>XL Mystery Box</h2>
+        <h3>
+            zufällig + zufällig<br>
+            mit zufälligen Motiven darauf
+        </h3>
+        <br>
+        <h2>XXL Mystery Box</h2>
+        <h3>
+            zufällig + zufällig + zufällig<br>
+            mit zufälligem Motiven darauf
+        </h3>
+    </center>
+
+    
+
+</body>
+</html>
