@@ -42,11 +42,11 @@
     <select name="Bestellen" id="Bestellen" required onchange="textAnzeigen()">
             <option value="">--Bitte Wählen--</option>
             <option value="Kette_mit_Bild">Kette mit Bild</option>
-            <option value="Kette ohne Bild">Kette ohne Bild</option>
+            <option value="Kette_ohne_Bild">Kette ohne Bild</option>
             <option value="Bild(schwarz-weiß)">Bild(schwarz-weiß)</option>
             <option value="Bild(Farbe)">Bild(Farbe)</option>
-            <option value="Armband mit Bild">Armband mit Bild</option>
-            <option value="Armband ohen Bild">Armband ohne Bild</option>
+            <option value="Armband_mit_Bild">Armband mit Bild</option>
+            <option value="Armband_ohen_Bild">Armband ohne Bild</option>
          </select><br>
      <input type="text" name="Bild"  placeholder="Bildwunsch"><br>
      <label for="file">Eigenes Bild , wenn nötig.</label><br>
@@ -62,17 +62,17 @@
             
             var output = document.getElementById("ergebnisText");
             
-            if (selectedValue === "Kette mit Bild") {
+            if (selectedValue === "Kette_mit_Bild") {
                 output.textContent = "Preis: 2€";
-            } else if (selectedValue === "Kette ohne Bild") {
+            } else if (selectedValue === "Kette_ohne_Bild") {
                 output.textContent = "Preis: 1,50€";
             } else if (selectedValue === "Bild(schwarz-weiß)") {
                 output.textContent = "Preis: 2€";
             } else if (selectedValue === "Bild(Farbe)") {
                 output.textContent = "Preis: 2,50€";
-            } else if (selectedValue === "Armband ohne Bild") {
+            } else if (selectedValue === "Armband_ohne_Bild") {
                 output.textContent = "Preis: 1€";
-            } else if (selectedValue === "Armband mit Bild") {
+            } else if (selectedValue === "Armband_mit_Bild") {
                 output.textContent = "Preis: 1,50€";
             } else {
                 output.textContent = "";
@@ -84,5 +84,3 @@
 </body>
 
 </html>
-
-
