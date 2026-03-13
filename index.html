@@ -38,18 +38,49 @@
     
     <form action="https://formsubmit.co/v08q3tjti@mozmail.com" method="POST" enctype="multipart/form-data">
      <input type="text" name="name" required placeholder="Name"><br>
-     <input type="text" name="Artikel" placeholder="Artikel"><br>
+     <p id="ergebnisText"></p>
+    <select name="Bestellen" id="Bestellen" required onchange="textAnzeigen()">
+            <option value="">--Bitte Wählen--</option>
+            <option value="Kette" id="Kette">Kette mit Bild</option>
+            <option value="Kette_o">Kette ohne Bild</option>
+            <option value="Bild_s-w">Bild(schwarz-weiß)</option>
+            <option value="Bild_f">Bild(Farbe)</option>
+            <option value="Armband">Armband mit Bild</option>
+            <option value="Armband_o">Armband ohne Bild</option>
+         </select><br>
      <input type="text" name="Bild"  placeholder="Bildwunsch"><br>
      <label for="file">Eigenes Bild , wenn nötig.</label><br>
      <input type="file" name="anhang" accept="image/*"><br><br>
      <button type="submit">Absenden</button>
     </center>
      
+<script>
+        function textAnzeigen() {
+            var selectElement = document.getElementById("Bestellen");
+            
+            var selectedValue = selectElement.value;
+            
+            var output = document.getElementById("ergebnisText");
+            
+            if (selectedValue === "Kette") {
+                output.textContent = "Preis: 2€";
+            } else if (selectedValue === "Kette_o") {
+                output.textContent = "Preis: 1,50€";
+            } else if (selectedValue === "Bild_s-w") {
+                output.textContent = "Preis: 2€";
+            } else if (selectedValue === "Bild_f") {
+                output.textContent = "Preis: 2,50€";
+            } else if (selectedValue === "Armband_o") {
+                output.textContent = "Preis: 1€";
+            } else if (selectedValue === "Armband") {
+                output.textContent = "Preis: 1,50€";
+            } else {
+                output.textContent = "";
+            }
+        }
+    </script>
+
 </form> 
 </body>
 
 </html>
-
-
-
-
