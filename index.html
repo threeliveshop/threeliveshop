@@ -41,12 +41,12 @@
      <p id="ergebnisText"></p>
     <select name="Bestellen" id="Bestellen" required onchange="textAnzeigen()">
             <option value="">--Bitte Wählen--</option>
-            <option value="Kette" id="Kette">Kette mit Bild</option>
-            <option value="Kette_o">Kette ohne Bild</option>
-            <option value="Bild_s-w">Bild(schwarz-weiß)</option>
-            <option value="Bild_f">Bild(Farbe)</option>
-            <option value="Armband">Armband mit Bild</option>
-            <option value="Armband_o">Armband ohne Bild</option>
+            <option value="Kette mit Bild" id="Kette">Kette mit Bild</option>
+            <option value="Kette ohne Bild">Kette ohne Bild</option>
+            <option value="Bild(schwarz-weiß)">Bild(schwarz-weiß)</option>
+            <option value="Bild(Farbe)">Bild(Farbe)</option>
+            <option value="Armband mit Bild">Armband mit Bild</option>
+            <option value="Armband ohen Bild">Armband ohne Bild</option>
          </select><br>
      <input type="text" name="Bild"  placeholder="Bildwunsch"><br>
      <label for="file">Eigenes Bild , wenn nötig.</label><br>
@@ -62,17 +62,17 @@
             
             var output = document.getElementById("ergebnisText");
             
-            if (selectedValue === "Kette") {
+            if (selectedValue === "Kette mit Bild") {
                 output.textContent = "Preis: 2€";
-            } else if (selectedValue === "Kette_o") {
+            } else if (selectedValue === "Kette ohne Bild") {
                 output.textContent = "Preis: 1,50€";
-            } else if (selectedValue === "Bild_s-w") {
+            } else if (selectedValue === "Bild(schwarz-weiß)") {
                 output.textContent = "Preis: 2€";
-            } else if (selectedValue === "Bild_f") {
+            } else if (selectedValue === "Bild(Farbe)") {
                 output.textContent = "Preis: 2,50€";
-            } else if (selectedValue === "Armband_o") {
+            } else if (selectedValue === "Armband ohne Bild") {
                 output.textContent = "Preis: 1€";
-            } else if (selectedValue === "Armband") {
+            } else if (selectedValue === "Armband mit Bild") {
                 output.textContent = "Preis: 1,50€";
             } else {
                 output.textContent = "";
